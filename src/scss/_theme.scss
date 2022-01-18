@@ -1,0 +1,10 @@
+/// Provides the value for the specified feature.
+/// @parameter {string} $feature - The name of the feature to be used to lookup the value
+/// @group Theme
+@function jazz-theme($feature) {
+  @if $jazz-enable-css-custom-properties {
+    @return var(--jazz-#{$feature});
+  } @else {
+    @return map-get($jazz-theme-feature, $feature);
+  }
+}

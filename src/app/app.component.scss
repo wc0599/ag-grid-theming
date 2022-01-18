@@ -1,0 +1,9 @@
+*::before,
+*::after,
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+// If you create your own theme, it's name has to follow the `ag-theme-{theme name}` naming convention, otherwise the grid's rendering will not detect it as being a valid theme.
