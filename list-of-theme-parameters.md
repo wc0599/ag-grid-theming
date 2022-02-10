@@ -1,4 +1,12 @@
-| # PARAMETERS                                     | # TESTED |
+
+| LEGEND | DESCRIPTION                                                                                    |
+| ------ | ---------------------------------------------------------------------------------------------- |
+| true   | was tested, and functionality was verified                                                     |
+| false  | was tested, and functionality was not verified. Needs more testing and additional verification |
+| N/A    | unsure how to test                                  						  |
+
+
+| PARAMETERS                                       | TESTED   |
 | ------------------------------------------------ | -------- |
 | foreground-color                                 | true     |
 | data-color                                       | true     |
