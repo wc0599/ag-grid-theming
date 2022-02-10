@@ -11,7 +11,6 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent {
   @ViewChild('theme1') theme1!: AgGridAngular;
-  @ViewChild('theme2') theme2!: AgGridAngular;
   // title = 'ag-grid-theming';
 
   columnDefs: ColDef[] = [
@@ -33,11 +32,11 @@ export class AppComponent {
     this.rowData = this.http.get<any[]>('https://www.ag-grid.com/example-assets/small-row-data.json');
   }
 
-  getSelectedRows(): void {
-    const selectedNodes = this.theme1.api.getSelectedNodes();
-    const selectedData = selectedNodes.map(node => node.data);
-    const selectedDataStringPresentation = selectedData.map(node => `${node.make} ${node.model}`).join(', ');
+  // getSelectedRows(): void {
+  //   const selectedNodes = this.theme1.api.getSelectedNodes();
+  //   const selectedData = selectedNodes.map(node => node.data);
+  //   const selectedDataStringPresentation = selectedData.map(node => `${node.make} ${node.model}`).join(', ');
 
-    alert(`Selected nodes: ${selectedDataStringPresentation}`);
-  }
+  //   alert(`Selected nodes: ${selectedDataStringPresentation}`);
+  // }
 }

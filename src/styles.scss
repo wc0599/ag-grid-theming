@@ -5,79 +5,117 @@
 $jazz-enable-css-custom-properties: true;
 
 @import "./scss/theme";
-// THEMES
 @import "./scss/theme_default";
-// COMPONENTS
-
 @import "./scss/color-hex-map";
 @import "./scss/table";
 
-// MAIN THEME
 .jazz-theme__table-basic {
   @include ag-theme-base(
     (
-      foreground-color: #000,
-
-      // ROW
-      data-color: jazz-theme(table-row-color),
-      row-hover-color: #E7F1FF,
-
-      // HEADER
-      header-foreground-color: jazz-theme(table-th-color),
-      header-background-color: jazz-theme(table-th-bgcolor),
-
-      // BORDER
-      borders: false,
-      borders-critical: true,
+      // COLORS
+      foreground-color: black,
+      background-color: transparent,
+      data-color: black,
+      secondary-foreground-color: black,
+      header-foreground-color: black,
+      odd-row-background-color: #EEEEEE,
       border-color: #D0D0D0,
-
-      cell-horizontal-padding: 18px,
-
+      secondary-border-color: ag-derived(border-color),
+      row-border-color: ag-derived(secondary-border-color),
+      row-hover-color: #E7F1FF,
     )
   );
 
-  // Remove row border below header border
   .ag-row-first {
       border-top: 0;
   }
   .ag-header {
       border-bottom: 0;
   }
-
   .ag-header-row-column {
     font-weight: bold;
   }
-
   .ag-header-cell {
-    border-bottom: 3px solid #717171;
+    border-bottom: 2px solid #717171;
+  }
+  .ag-menu, .ag-popup, .ag-list-item {
+    background-color: #fff;
   }
 }
 
-// SECOND THEME
-// use ag-derived helper function to allow theme extension by other developers, and to derive values from another property.
-.jazz-theme__table-dark {
+.jazz-theme__table-two {
   @include ag-theme-base(
     (
-      foreground-color: #000,
-      data-color: ag-derived(border-color),
-      header-foreground-color: orange,
-      secondary-foreground-color: yellow,
-      borders: true,
-      border-radius: 5px,
-      border-color: maroon,
-      header-column-separator: true,
-      header-column-separator-width: 1px,
-      header-column-separator-color: ag-derived(border-color, $opacity: 0.5),
-      font-family: (
-        Georgia,
-        sans-serif,
-      ),
+      // COLORS
+      foreground-color: #fff,
+      background-color: transparent,
+      data-color: #fff,
+      secondary-foreground-color: #fff,
+      header-foreground-color: #fff,
+      odd-row-background-color: #2A2A2A,
+      subheader-toolbar-background-color: #fff,
+      control-panel-background-color: #fff,
+      border-color: #D0D0D0,
+      secondary-border-color: #414141,
+      row-border-color: ag-derived(secondary-border-color),
+      row-hover-color: #146FEB,
     )
   );
+
+  .ag-row-first {
+      border-top: 0;
+  }
+  .ag-header {
+      border-bottom: 0;
+  }
+  .ag-header-row-column {
+    font-weight: bold;
+  }
+  .ag-header-cell {
+    border-bottom: 2px solid #A0A0A0;
+  }
+  .ag-menu, .ag-popup, .ag-list-item {
+    background-color: #414141;
+  }
+}
+
+.jazz-theme__table-three{
+  @include ag-theme-base(
+    (
+      // COLORS
+      foreground-color: black,
+      background-color: transparent,
+      data-color: black,
+      secondary-foreground-color: black,
+      header-foreground-color: black,
+      odd-row-background-color: #EEEEEE,
+      border-color: #D0D0D0,
+      secondary-border-color: ag-derived(border-color),
+      row-border-color: ag-derived(secondary-border-color),
+      row-hover-color: #E7F1FF,
+    )
+  );
+
+  .ag-row-first {
+      border-top: 0;
+  }
+  .ag-header {
+      border-bottom: 0;
+  }
+  .ag-header-row-column {
+    font-weight: bold;
+  }
+  .ag-header-cell {
+    border-bottom: 2px solid #717171;
+  }
+  .ag-menu, .ag-popup, .ag-list-item {
+    background-color: #fff;
+  }
 }
 
 body {
   background-color: white;
+  padding: 1rem;
 }
 
 * {

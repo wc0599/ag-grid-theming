@@ -1,5 +1,5 @@
 <div role="main">
-  <h1>Table #1</h1>
+  <h1>Default Table</h1>
   <ag-grid-angular
     #theme1
     style="width: 500px; height: 200px"
@@ -9,15 +9,7 @@
     rowSelection="multiple"
   >
   </ag-grid-angular>
-  <h1>Table #2</h1>
-  <ag-grid-angular
-    #theme2
-    style="width: 500px; height: 200px"
-    class="jazz-theme__table-dark"
-    [rowData]="rowData | async"
-    [columnDefs]="columnDefs"
-    rowSelection="multiple"
-  >
-  </ag-grid-angular>
-  <button (click)="getSelectedRows()">Get Selected Rows!</button>
+  <app-aggrid-table-two></app-aggrid-table-two>
+  <app-aggrid-table-three></app-aggrid-table-three>
+  <!-- <button (click)="getSelectedRows()">Get Selected Rows!</button> -->
 </div>

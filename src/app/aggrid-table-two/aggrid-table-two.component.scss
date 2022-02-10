@@ -1,0 +1,23 @@
+@import '/node_modules/ag-grid-community/dist/styles/ag-grid.scss';
+@import '/node_modules/ag-grid-community/dist/styles/ag-theme-base/sass/ag-theme-base-mixin';
+
+.jazz-theme__table-two {
+  @include ag-theme-base(
+    (
+      foreground-color: red,
+      data-color: blue,
+      header-foreground-color: orange,
+      secondary-foreground-color: yellow,
+
+      borders: true,
+      border-color: maroon,
+      header-column-separator: true,
+      header-column-separator-width: 1px,
+      header-column-separator-color: ag-derived(border-color, $opacity: 0.5),
+      font-family: (
+        Georgia,
+        sans-serif,
+      ),
+    )
+  );
+}
