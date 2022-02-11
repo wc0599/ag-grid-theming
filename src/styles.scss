@@ -1,13 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
 @import '../node_modules/ag-grid-community/dist/styles/ag-grid.scss';
 @import '../node_modules/ag-grid-community/dist/styles/ag-theme-base/sass/_ag-theme-base-mixin.scss';
 
-$jazz-enable-css-custom-properties: true;
+// $jazz-enable-css-custom-properties: true;
 
-@import "./scss/theme";
-@import "./scss/theme_default";
-@import "./scss/color-hex-map";
-@import "./scss/table";
+// @import "./scss/theme";
+// @import "./scss/theme_default";
+// @import "./scss/color-hex-map";
+// @import "./scss/table";
 
 .jazz-theme__table-basic {
   @include ag-theme-base(
